@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "799290ac-41ba-476f-b917-401767c87e16",
+		"name": "620119264_Lab3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25793328"
+	},
+	"item": [
+		{
+			"name": "a. All Customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:5000/customers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "b. Customer by customer_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/customer/3",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"customer",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "c. Add a customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"age\": 25,\r\n    \"annual_income\": 5000,\r\n    \"customer_id\": 2030,\r\n    \"family_size\": 3,\r\n    \"gender\": \"Female\",\r\n    \"profession\": \"Artist\",\r\n    \"spending_score\": 82,\r\n    \"work_experience\": 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/add_customer",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"add_customer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "d. Update Profession",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"profession\": \"Healthcare\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/update_profession/3",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"update_profession",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "e. Highest Income Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/highest_income_report",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"highest_income_report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "f. Total Income Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/total_income_report",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"total_income_report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "g. Average Work Experience",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/average_work_experience",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"average_work_experience"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "h. Average Spending Score",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/average_spending_score/Engineer",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"average_spending_score",
+						"Engineer"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://127.0.0.1:5000"
+		}
+	]
+}
